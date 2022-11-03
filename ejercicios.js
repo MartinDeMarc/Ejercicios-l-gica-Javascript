@@ -9,6 +9,17 @@
 // Notas: Su salida debe distinguir entre mayúsculas y minúsculas (vea el segundo
 // ejemplo).
 
+function cuantasVecesSeRepite(cadena, caracter) {
+  let indices = [];
+  for (let i = 0; i < cadena.length; i++) {
+    if (cadena[i].toLowerCase() === caracter) indices.push(i);
+  }
+  return `Las veces que se repite es: ${indices.length}`;
+}
+
+console.log(cuantasVecesSeRepite("holaaas", "a"));
+console.log(cuantasVecesSeRepite("hoolamundoo", "o"));
+
 // Ejercicio 2: Encuentra los números más pequeños y más grandes
 // - Cree una función que tome una matriz de números y devuelva los números
 // mínimo y máximo, en ese orden.
